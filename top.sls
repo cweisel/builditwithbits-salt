@@ -6,4 +6,7 @@ base:
     - salt-master
   ci.builditwithbits.com:
     - jenkins
+    - build-blog
+  www.builditwithbits.com:
+    - blog
 
