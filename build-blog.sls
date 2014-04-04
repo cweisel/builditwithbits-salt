@@ -11,7 +11,6 @@ virtualenv:
 
 /srv/build/builditwithbits:
   file.directory:
-    - user: jenkins
     - mkdirs: True
 
 /srv/build/builditwithbits/env:

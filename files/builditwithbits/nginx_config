@@ -5,7 +5,6 @@ server {
     server_name www.builditwithbits.com;
 
     location / {
-        root /srv/www/builditwithbits/output
+        root /srv/www/builditwithbits/output;
     }
-
 }

@@ -11,16 +11,21 @@ https://github.com/cweisel/builditwithbits-blog.git:
 builditwithbits:
   cmd.wait:
     - name: /srv/build/builditwithbits/env/bin/pelican /srv/www/builditwithbits/content/
+    - cwd: /srv/www/builditwithbits/
+    - watch:
+      - git: https://github.com/cweisel/builditwithbits-blog.git
 
 nginx:
   pkg:
     - installed
   service:
     - running
+    - require:
+      - pkg: nginx
 
 /etc/nginx/sites-enabled/builditwithbits:
   file.managed:
-    - source: salt://files/builditiwthbits/nginx_config
+    - source: salt://files/builditwithbits/nginx_config
     - watch_in:
       - service: nginx
 

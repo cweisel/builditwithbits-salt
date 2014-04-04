@@ -7,6 +7,6 @@ base:
   ci.builditwithbits.com:
     - jenkins
     - build-blog
-  www.builditwithbits.com:
+  web0.builditwithbits.com:
     - blog
 
